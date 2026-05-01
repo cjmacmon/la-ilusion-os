@@ -167,7 +167,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: TextStyle(color: Colors.white70, fontSize: 16)),
                   const SizedBox(height: 8),
                   Text(
-                    gam != null ? formatCOP(gam.gananciasHoyCop) : '$ —',
+                    gam != null ? formatCOP(gam.gananciasHoyCop) : r'$ —',
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 42,

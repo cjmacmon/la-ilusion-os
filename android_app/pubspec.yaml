@@ -33,7 +33,7 @@ dependencies:
   provider: ^6.1.2
 
   # Internationalization (COP formatting)
-  intl: ^0.19.0
+  intl: ^0.20.2
 
   # Charts
   fl_chart: ^0.68.0

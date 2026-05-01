@@ -7,7 +7,7 @@ function requireAuth(req, res, next) {
   }
   const token = header.slice(7);
   try {
-    req.user = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = jwt.verify(token, process.env.JWT_SECRET || 'hacienda_la_ilusion_secret_2026');
     next();
   } catch {
     res.status(401).json({ success: false, error: 'Token inválido o expirado' });

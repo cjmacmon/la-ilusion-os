@@ -41,6 +41,7 @@ router.post('/login', async (req, res) => {
       return res.status(400).json({ success: false, error: 'Credenciales incompletas' });
     }
 
+    const secret = process.env.JWT_SECRET || 'hacienda_la_ilusion_secret_2026';
     const token = jwt.sign(
       {
         trabajador_id: trabajador.trabajador_id,
@@ -49,7 +50,7 @@ router.post('/login', async (req, res) => {
         rol: trabajador.rol,
         zona: trabajador.zona,
       },
-      process.env.JWT_SECRET,
+      secret,
       { expiresIn: '7d' }
     );
 

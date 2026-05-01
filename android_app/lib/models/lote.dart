@@ -24,9 +24,9 @@ class Lote {
         codLote: m['cod_lote'] as String,
         nombre: m['nombre'] as String,
         zona: m['zona'] as int,
-        hectareas: (m['hectareas'] as num?)?.toDouble(),
+        hectareas: m['hectareas'] == null ? null : double.tryParse(m['hectareas'].toString()),
         numeroPalmas: m['numero_palmas'] as int?,
-        pesoPromedioKg: (m['peso_promedio_kg'] as num?)?.toDouble(),
+        pesoPromedioKg: m['peso_promedio_kg'] == null ? null : double.tryParse(m['peso_promedio_kg'].toString()),
         anioSiembra: m['anio_siembra'] as int?,
       );
 

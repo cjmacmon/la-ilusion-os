@@ -3,6 +3,8 @@ WORKDIR /app
 COPY package*.json ./
 RUN set -e && npm install --verbose
 COPY . .
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
 RUN set -e && npm run build --verbose
 RUN set -e && \
     echo "Verifying dist output..." && \
